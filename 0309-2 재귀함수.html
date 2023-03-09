@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 재귀함수 : 자기자신을 불러오는 함수 */
+        // for과 유사한 결과를 낸다.
+
+        // 함수안에 for문으로 작성
+        function hiFor(num){
+            for(let i = 0; i<num; i++) {
+                document.write("<p>반갑습니다</p>");
+            }
+        }
+        hiFor(4);
+
+        // 재귀함수로 숫자값을 넣었을때 반복하는 함수
+        function hi(num) {
+            document.write(`<p>hi(${num})의 시작</p>`);
+            // 재귀함수를 작성할때 빠져나오는 조건필요
+            if (num <= 0) {
+                document.write(`<p>hi(${num})의 끝</p>`);
+                return 0; // 함수 종료 위치를 정할 수 있음
+            } else {
+                document.write("환영합니다");
+                hi(num-1);
+            }
+            document.write(`<p>hi(${num})의 끝</p>`);
+            // return 값이 없을때 함수 끝에 자동으로 들어감
+            return undefined; // 함수 종료
+        }
+
+        // 함수 내용을 확인할때는 함수 호출한 곳에 브레이크 포인트
+        hi(3); 
+
+        // 1~num 까지의 합 구하는 함수
+        // num = 5
+        function sumFor(num) {
+            let sum = 0;
+            for (let i = 1; i<=num; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+        document.write(`<p>${sumFor(3)}</p>`)
+
+        // 재귀함수를 이용한 1~num 총합 구하는 함수
+        function sum(num) {
+            document.write(`<p>${num}시작</p>`);
+            // num이 3일때 > 3,2,1,0 : sum(num-1);
+            // num을 받아왔을 때 자기 자신을 계속 더한 후
+            // 최종 return 전달
+            if( num == 0 ) {
+                return num;
+            }else {
+                return num+sum(num-1);
+            }
+        }
+        document.write(sum(3));
+    </script>
+</body>
+</html>
