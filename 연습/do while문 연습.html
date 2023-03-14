@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let num = 0;
+    do {
+      document.write("<p>세번 반복합니다</p>");
+      num++; 
+    } while(num<3)
+
+    let count = 0;
+    let password = "green";
+    count++;
+    do {
+      password = prompt("비밀번호를 입력하세요");
+    } while (password != "green")
+    document.write(`<p>${count}회 입력하였습니다</p>`);
+  </script>
+</body>
+</html>

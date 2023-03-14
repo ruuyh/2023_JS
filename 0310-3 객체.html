@@ -131,22 +131,22 @@
         myBusCard.charge(1000);
         
         // 생성자 함수를 이용한 객체 생성 실습 3
-        function Messege(name, content, time) {
+        function Message(name, content, time) {
             // 객체 속성
             this.name = name;
             this.content = content;
             this.time = time;
             // 객체 메소드 
-            this.modufyMessege = function(messege){
-                this.content = messege;
+            this.modifyMessage = function(message){
+                this.content = message;
             },
-            this.showMessege = function(){
+            this.showMessage = function(){
                 return `${this.name}님께서 ${this.content}를 ${this.time}에 보냈습니다`;
             }
         }
 
-        let myMessege = new Messege("홍길동","반갑습니다","0224");
-        let yourMessege = new Messege("성춘향","안녕하세요","0224");
+        let myMessage = new Message("홍길동","반갑습니다","0224");
+        let yourMessage = new Message("성춘향","안녕하세요","0224");
 
         // 생성자 함수로 만든 객체는 객체의 메소드에 접근 가능
         let num = Number(123);
@@ -160,9 +160,9 @@
         // this - 자기 자신을 호출하는 키워드
 
         // delete 연습 : 객체의 속성/메소드 삭제
-        delete myMessege.name;
+        delete myMessage.name;
         // name속성이 삭제되어 undefined로 출력
-        console.log(myMessege.showMessege());
+        console.log(myMessage.showMessage());
 
         // 객체 안의 속성/메소드 반복
         // for ... in
@@ -173,7 +173,7 @@
         }
 
         // for in 실습
-        for(let i in yourMessege) {
+        for(let i in yourMessage) {
             document.write(`<p>${i}</p>`);
         }
 

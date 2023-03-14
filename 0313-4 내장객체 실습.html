@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*Array*/
+    // sort()
+    let numArray = [3, 6, 7, 2, 7, 3, 1];
+    // sort()를 사용하면 배열이 정렬된다
+    numArray.sort();
+    document.write(`<p>${numArray}</p>`)
+    // 순서에 맞춰 정렬을 하기 위해
+    // 정렬함수를 작성하여 사용할 수 있다
+    // 함수 이름 통해서 함수 전달, 
+
+    // 인터넷 코드
+        //Array 객체 실습 1번
+        NumArray = [3,6,7,2,7,3,1];
+
+        NumArray.sort();
+        document.writeln(NumArray + '<br'); //
+        
+        // 정렬하는 함수 : a와 b값을 비교해서 큰 값을 나중에 출력
+        // 1,2,3,4 (순서로 출력)
+
+         function compare(a,b) {
+          if(a>b) {
+            return 1;  // 나중에 출력
+          } else if (a<b) {
+            return -1; // 먼저 출력
+          } else {
+            return 0 // 동일
+          }
+         }
+
+
+         // Array 실습2
+         // pop() - 배열의 마지막 요소를 제거하고 return값으로 전달
+         let flowerArray = ["튤립", "장미", "국화"]; {
+         console.log(flowerArray.pop());
+         console.log(flowerArray.pop());
+         console.log(flowerArray.pop());
+         pop()
+          }
+         
+         document.write(`<p>${array}</p>`)
+
+         /*String - 문자열 */
+         //String은 배열과 유사하다
+         let string = "홍길동"
+         // charAt() 0~n : 문자열의 인덱스 위치에 있는 값을 가져옴
+         document.write(`<p>${string.charAt}</p>`)
+          document.write(`<p>${string[1]}</p>`)
+         // match() : 지정된 문자와 동일한 문자찾기
+         //값이 있을 때는 그 값을 return 하고 없으면 null
+         document.write(`<p>${string.match("홍")}</p>`)
+         // search() : 지정된 문자와 동일한 문자찾기
+         // 값이 있을때는 그 인덱스값 return 없으면 -1
+         document.write(`<p>${string.search("향")}</p>`)
+
+          // replace(a,b) : a의 값을 b로 대체
+          string.replace("홍","김");
+          document.write(`<p>${string}</p>`)
+          document.write(`<p>${string.replace("홍","김")}</p>`)
+
+          //split() 문자열을 자르는 메소드
+          // return값으로 배열을 돌려준다
+          // 전화번호, 주민등록번호 등과 같이 기호로 나뉘는 문자열
+          document.write(`<p>${string.split}</p>`)
+          document.write(`<p>${Array.isArray(string.split("길"))}</p>`)
+
+          // Math 객체 실습
+          let r = 4;
+          document.write(`원의넓이:${r*rMath.PI}`);
+
+</script>
+</body>
+</html>
