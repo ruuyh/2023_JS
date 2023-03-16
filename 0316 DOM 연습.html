@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="light">
+  <h1 id="title" class="title">HTML 태그와 DOM 객체</h1>
+  <form id="form" action="">
+
+  <p>이름을 입력해 주세요</p>
+  <input id="input" type="text" required>
+  <br>
+  
+
+  <input type="radio" name="gender" id="radio1" value="female"> <sapn>여성</sapn>
+  <input type="radio" name="gender" id="radio1" value="male"><span>남성</span>
+<br>
+  <p>좋아하는 과일을 중복해서 고르세요</p>
+  <input type="checkbox1" id="checkbox" name="fruit" value="apple" checked><span>사과</span>
+  <input type="checkbox2" id="checkbox" name="fruit" value="orange"><span>오렌지</span>
+  <input type="checkbox3" id="checkbox" name="fruit" value="strawberry"><span>딸기</span>
+  <input type="checkbox4" id="checkbox" name="fruit" value="peach"><span>복숭아</span>
+<br>
+<input id="date" type="date" min="2023-03-16">
+<br>
+<input id="submit" type="submit" value="제출">
+
+<!-- 버튼 글자 바꾸기-->
+ <button id="btn2" onclick="printTest()">버튼 클릭하면 버튼안의 글자가 바뀝니다</button>
+ 
+<!-- 마우스 올리면 빨간색-->
+<p id="p1" onmouseenter="changeColor()">마우스를 올리면 글자가 빨간색으로 바뀝니다</p>
+
+<!-- 마우스 떠나면 파란색-->
+ <p id="p2" onmouseleave="changeColor()">
+       마우스를 빠져나가면 글자가 파란색으로 바뀝니다 
+       *처음에는 검정색
+     </p>
+
+  <!--처음엔 검정 올리면 빨강 떠나면 파랑--> 
+  <p id="p3">
+         마우스를 올리면 글자가 빨간색으로, 마우스가 빠져나가면 파란색으로 바뀝니다
+         *처음에는 검정색
+       </p>
+    
+</form>
+<script>
+  document.querySelector("input").value;
+
+  // 버튼 글자 바꾸기
+let btn = document.querySelector('#btn2')
+
+function printTest(){
+  document.getElementById('btn2').innerHTML = '안녕';
+}
+
+// 마우스 올리면 글자색 빨간색으로 바꾸기
+document.getElementById("p1").onmouseenter = function() {mouseEnter()};
+function mouseEnter() {
+    document.getElementById("p1").style.color = "red";
+}
+
+// 마우스 떠나면 글자색 파란색으로 바꾸기
+document.getElementById("p2").onmouseleave = function() {mouseLeave()};
+function mouseLeave() {
+    document.getElementById("p2").style.color = "blue";
+}
+
+// 마우스 올리면 빨간색 떠나면 파란색 처음엔 검정
+// 로직
+// 변수를 선언
+// 이벤트 생성
+// 이벤트가 발생되면 컬러가 바뀜
+
+const pThree = document.getElementById("p3")
+
+
+let hello = () =>{
+  pThree.style.color = 'red'
+}
+
+function bye(){
+  pThree.style.color = 'blue'
+}
+
+pThree.addEventListener('mouseenter', hello)
+pThree.addEventListener('mouseleave', bye)
+
+
+</script>
+</body>
+
+
+</html>
