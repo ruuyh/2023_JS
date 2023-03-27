@@ -141,6 +141,7 @@
         p2.addEventListener("mouseenter", function(e){
             p2.style.color="red";
             console.log(e)
+
             // 이벤트 객체 들고와서 백그라운드 컬러 gray
             e.target.style.backgroundColor = "gray";
         });
@@ -173,6 +174,7 @@
             e.target.innerHTML = "값이 바뀝니다";
             console.dir(e)
         }
+
 
         // p4를 가져와서 이벤트와 함수작성
         const p4 = document.querySelector("#p4");
